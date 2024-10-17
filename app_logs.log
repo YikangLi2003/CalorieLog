@@ -1,0 +1,9 @@
+[WARNING 2024-10-14 19:07:42] Failed to add user 'John Smith' since this user already exists.
+[INFO 2024-10-14 19:09:52] Deleted user 'John Smith' and related data in dir 'c:\Users\ethan\Desktop\apitest/data/John Smith'
+[WARNING 2024-10-14 19:10:48] Failed to delete user 'John Smith' since this user does not exist.
+[INFO 2024-10-14 19:22:24] Added user 'John Smith'.
+[INFO 2024-10-14 19:22:24] Added user 'Peter Duan'.
+[INFO 2024-10-14 19:22:24] Added user 'Xinglin Wang'.
+[INFO 2024-10-14 19:22:24] Added user 'Yeegee Giao'.
+[INFO 2024-10-14 19:22:24] Added user 'Vincent Huang'.
+[INFO 2024-10-14 19:24:28] Deleted user 'Xinglin Wang'. This user has no related data.
