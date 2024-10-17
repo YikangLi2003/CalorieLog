@@ -1,2 +1,2 @@
 # CalorieLog
-A web app used to help you logging daily calories intake. The project is a practice example that includes web front-end and API back-end implementations.
+Give me some time to write readme for this project. I swear I will.
