@@ -1,0 +1,2 @@
+[ERROR   2024-12-11 20:48:18 +0800] Error No.5 occurred.
+[INFO    2024-12-11 20:48:18 +0800] This is just a piece of message.
