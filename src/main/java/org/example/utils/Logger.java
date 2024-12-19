@@ -26,7 +26,7 @@ public class Logger {
     public void log(Level level, String message, Object... args) {
         String timestamp = Timestamp.get();
         String formattedMessage = (args.length > 0) ? String.format(message, args) : message;
-        String logMessage = String.format("[%-7s %s] %s", level, timestamp, formattedMessage);
+        String logMessage = String.format("%s %s %s", timestamp, level, formattedMessage);
 
         System.out.println(logMessage);
 
