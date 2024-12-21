@@ -1,0 +1,8 @@
+2024-12-22 00:49:05 +0800 INFO This is a piece of information: info 1 info 2.
+2024-12-22 00:49:05 +0800 DEBUG Trying to find bugs by invoking these methods.
+2024-12-22 00:49:05 +0800 WARNING It seems that there is a bug! 123
+2024-12-22 00:49:05 +0800 ERROR Actually no error occurs
+2024-12-22 00:49:41 +0800 INFO This is a piece of information: info 1 info 2.
+2024-12-22 00:49:41 +0800 DEBUG Trying to find bugs by invoking these methods.
+2024-12-22 00:49:41 +0800 WARNING It seems that there is a bug! 123
+2024-12-22 00:49:41 +0800 ERROR Actually no error occurs

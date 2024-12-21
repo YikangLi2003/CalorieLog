@@ -1,19 +1,24 @@
 package org.example;
 
-import java.io.PrintStream;
+import org.example.utils.Logger;
+import org.example.utils.PropertyAccessor;
+import org.example.utils.Timestamp;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Logger.getInstance().log(Logger.Level.INFO, "This is a piece of information: %s %s.", "info 1", "info 2");
+        Logger.getInstance().log(Logger.Level.DEBUG, "Trying to find bugs by invoking these methods.");
+        Logger.getInstance().log(Logger.Level.WARNING, "It seems that there is a bug! %d", 123);
+        Logger.getInstance().log(Logger.Level.ERROR, "Actually no error occurs");
+        Logger.getInstance().closeLogFile();
+        Logger.getInstance().log(Logger.Level.INFO, "This info should not appear in log file");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+
+        System.out.println("Time right now: " + Timestamp.getInstance().get());
+
+        System.out.println("Property Accessor:");
+        System.out.println("http.server.port=" + PropertyAccessor.getInstance().getProperty("http.server.port"));
+        System.out.println("database.url=" + PropertyAccessor.getInstance().getProperty("database.url"));
+        System.out.println("timestamp.pattern=" + PropertyAccessor.getInstance().getProperty("timestamp.pattern"));
     }
 }

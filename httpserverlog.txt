@@ -1,8 +1,0 @@
-2024-12-19 23:06:16 +0800 ERROR Error No.4 occurred.
-2024-12-19 23:06:16 +0800 INFO This is just a piece of message!!
-2024-12-19 23:06:16 +0800 DEBUG Seems no bug, i = 12.
-2024-12-19 23:06:16 +0800 WARNING Timestamp access denied. Check os config.
-2024-12-20 01:53:18 +0800 ERROR Error No.4 occurred.
-2024-12-20 01:53:18 +0800 INFO This is just a piece of message!!
-2024-12-20 01:53:18 +0800 DEBUG Seems no bug, i = 12.
-2024-12-20 01:53:18 +0800 WARNING Timestamp access denied. Check os config.

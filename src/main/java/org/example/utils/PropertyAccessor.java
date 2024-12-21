@@ -5,8 +5,7 @@ import java.io.InputStream;
 
 public class PropertyAccessor {
     private static final String CONFIG_FILE_PATH = "config.properties";
-
-    private static PropertyAccessor instance;
+    private static final PropertyAccessor INSTANCE = new PropertyAccessor();
 
     private final Properties properties;
 
@@ -25,14 +24,17 @@ public class PropertyAccessor {
         }
     }
 
-    public static synchronized PropertyAccessor getInstance() {
-        if (instance == null) {
-            instance = new PropertyAccessor();
-        }
-        return instance;
+    public static PropertyAccessor getInstance() {
+        return INSTANCE;
     }
 
     public String getProperty(String key) {
+        String value = properties.getProperty(key);
+
+        if (value == null) {
+            throw new RuntimeException(String.format("No such key '%s' in configuration properties file.", key));
+        }
+
         return properties.getProperty(key);
     }
 }

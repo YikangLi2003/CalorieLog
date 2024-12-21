@@ -4,10 +4,21 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Timestamp {
-    private static final DateTimeFormatter FORMATTER =
-            DateTimeFormatter.ofPattern(PropertyAccessor.getInstance().getProperty("utils.timestamp.pattern"));
+    private static final Timestamp INSTANCE = new Timestamp();
 
-    public static String get() {
+    private final DateTimeFormatter FORMATTER;
+
+    private Timestamp() {
+        FORMATTER = DateTimeFormatter.ofPattern(
+                PropertyAccessor.getInstance().getProperty("timestamp.pattern")
+        );
+    }
+
+    public static Timestamp getInstance() {
+        return INSTANCE;
+    }
+
+    public String get() {
         return ZonedDateTime.now().format(FORMATTER);
     }
 }
